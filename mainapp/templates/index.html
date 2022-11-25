@@ -1,0 +1,20 @@
+{% extends "includes/base.html" %}
+
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/base/reset.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block scripts %}
+    <script src="https://kit.fontawesome.com/6c1cf59610.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static '/js/index.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
