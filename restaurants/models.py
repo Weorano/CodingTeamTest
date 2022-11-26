@@ -1,6 +1,7 @@
 from django.db import models
 from model_utils.models import TimeStampedModel
 
+
 class FoodCategory(TimeStampedModel):
     name_ru = models.CharField(
         verbose_name='Название на русском',
@@ -106,3 +107,7 @@ class Food(TimeStampedModel):
 
     def __str__(self):
         return self.name_ru
+
+    class Meta:
+        verbose_name = 'Блюдо'
+        verbose_name_plural = 'Блюда'
