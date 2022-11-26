@@ -15,14 +15,6 @@ class FoodSerializer(serializers.ModelSerializer):
 class FoodListSerializer(serializers.ModelSerializer):
     foods = FoodSerializer(source='food', many=True, read_only=True)
 
-    # foods = serializers.SerializerMethodField()
-    #
-    # @staticmethod
-    # def get_foods(food_category):
-    #     queryset = Food.objects.filter(is_publish=True, category=food_category)
-    #     serializer = FoodSerializer(instance=queryset, many=True, read_only=True)
-    #     return serializer.data
-
     class Meta:
         model = FoodCategory
         fields = ('id', 'name_ru', 'name_en', 'name_ch', 'order_id', 'foods')
